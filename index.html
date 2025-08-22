@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #c4a6b8;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #dd8bce;
+      color: white;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('tech.jpeg') center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .hero a {
+      background-color: #a04c7f;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background-color: #7e2d53;
+    }
+
+    /* Countdown Timer */
+    .countdown {
+      background-color: #743555;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* Sections */
+    .section {
+      padding: 50px 10%;
+    }
+    .section h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    /* Columns Layout */
+    .columns {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 1;
+      min-width: 250px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .column h4 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+      text-align: center;
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    .testimonial h4 {
+      margin-top: 10px;
+      color: #0b0701;
+    }
+
+    /* Form Section */
+    .form-section {
+      background-color: #ecf0f1;
+      padding: 50px 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-section input, 
+    .form-section button, 
+    .form-section textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .form-section button {
+      background-color: #733d53;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    .form-section button:hover {
+      background-color: #663137;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #703545;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Techenthu 2025</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#register">Register</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Join the Future of Technology</h2>
+    <p>September 15, 2025 | Virtual Workshop on Technology</p>
+    <a href="#register">Register Now</a>
+  </section>
+
+  <!-- Countdown Timer -->
+  <div class="countdown" id="countdown">
+    Event Starts In: Loading...
+  </div>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h3>About the Event</h3>
+    <div class="columns">
+      <div class="column">
+        <h4>Networking</h4>
+        <p>Connect with industry leaders and like-minded innovators.</p>
+      </div>
+      <div class="column">
+        <h4>Workshops</h4>
+        <p>Hands-on sessions to boost your skills and knowledge.</p>
+      </div>
+      <div class="column">
+        <h4>Keynotes</h4>
+        <p>Hear inspiring talks from top tech pioneers worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers Section -->
+  <section class="section" id="speakers">
+    <h3>Speakers</h3>
+    <div class="columns">
+      <div class="column">
+        <h4>Jane Doe</h4>
+        <p>AI Researcher at OpenAI</p>
+      </div>
+      <div class="column">
+        <h4>John Smith</h4>
+        <p>CTO at FutureTech Inc.</p>
+      </div>
+      <div class="column">
+        <h4>Emily Johnson</h4>
+        <p>Cybersecurity Expert</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section" id="testimonials">
+    <h3>What People Say</h3>
+    <div class="columns"><center>
+      <div class="testimonial">
+        <p>"One of the best tech events I've ever attended!"</p>
+        <h4>- Alex W.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Amazing speakers and great networking opportunities."</p>
+        <h4>- Priya K.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Well organized and highly informative sessions."</p>
+        <h4>- Michael B.</h4>
+      </div></center>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="section" id="register">
+    <h3>Register for Techenthu 2025</h3>
+    <div class="form-section">
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Organization / Company">
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h3>Contact Us</h3>
+    <div class="form-section">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Techenthu. All rights reserved.</p>
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    function updateCountdown() {
+      const eventDate = new Date("March 15, 2025 09:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerHTML = "The event has started!";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `Event Starts In: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
